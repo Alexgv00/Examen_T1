@@ -1,0 +1,165 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+@font-face {
+    font-family: "Shentox";
+    src: url(../fonts/Shentox-Medium.woff2);
+}
+:root{
+    --bg-header: #101114;
+    --text-primary: #d6d6d6;
+    --text-select: #fbfb00;
+    --btn-color: #54f2dc;
+    --bg--grid-cart: #13151a;
+    --bg-cart-info: #19171b;
+    --feature-color: #47c4b4;
+}
+*{
+    font-family: Shentox;
+    color: var(--text-primary);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000000;
+}
+header{
+    top: 0;
+    position: fixed;
+    display: flex;
+    align-content: center;
+
+    background: var(--bg-header);
+    height: 80px;
+    width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 1.5rem;
+}
+nav a{
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.cart-container:hover a{
+    color: var(--text-select);
+}
+.cart-container:hover #user-shopping-cart{
+    display: block;
+    color: var(--text-primary);
+    border: 1px solid #d6d6d6;
+    height: auto;
+    width: 160px;
+}
+.cart-container h3{
+    text-align: center;
+}
+.total{
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-select);
+    font-weight: bolder;
+}
+.total input{
+    background-color: var(--btn-color);
+    clip-path: polygon(100% 0, 100% 83%, 86% 100%, 0 100%, 0 0);
+    font-weight: bolder;
+}
+#user-shopping-cart{
+    display: none;
+
+}
+.hero{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/characters-hero-v3.jpg);
+    background-size: contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--text-primary);
+    font-weight: bolder;
+}
+
+
+#grid-container{
+    background-image: url(../img/bg-univers.jpg);
+    background-size: contain;
+    margin: 0 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    'title title title title'
+    'item1 item2 item3 item4'
+    'item5 item6 item7 item8'
+    ;
+    gap: 1rem;
+}
+.choose-fleet-title{
+    grid-area: title;
+    text-align: center;
+}
+.grid-item {
+    height: auto;
+    border: 3px solid #111111;
+}
+.grid-item img{
+    height: 8rem;
+}
+.name{
+    background-color: var(--bg--grid-cart);
+    text-align: center;
+}
+.price {
+    background-color: var(--bg--grid-cart);
+    text-align: center;
+}
+.selected{
+    background-color: rgba(255, 255, 0, 0.5);
+}
+
+#card-ship{
+    background-image: url(../img/bg-planet.jpg);
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+}
+.img-container{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#card-ship img{
+    height: 60vh;
+}
+.cart-info{
+    width: 30vw;
+    padding: 1rem;
+    margin-right: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 90% 100%, 51% 100%, 38% 91%, 25% 100%, 0 100%);
+    background-color: var(--bg-cart-info);
+
+
+    display: flex;
+    flex-direction: column;
+}
+.features{
+    display: flex;
+    justify-content: space-between;
+}
+.features lable{
+    color: var(--feature-color);
+}
+
+footer{
+    width: auto;
+}
